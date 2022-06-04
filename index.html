@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nationality Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img src="./assets/1.jpg" width="100" class="baseImg" />
+      <div class="topRight" ondrop="drop(event)" ondragover="allowDrop(event)">
+        Japanese
+      </div>
+      <div class="topLeft" ondrop="drop(event)" ondragover="allowDrop(event)">
+        Korean
+      </div>
+      <div
+        class="bottomRight"
+        ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+      >
+        Chinese
+      </div>
+      <div
+        class="bottomLeft"
+        ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+      >
+        Thai
+      </div>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>
