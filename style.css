@@ -1,78 +1,150 @@
 body {
-    background: #010101;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-  }
-  .container {
-    width: 70vw;
-    height: 80vh;
-    position: relative;
-    background-color: #ffffff;
-    overflow: hidden;
-  }
+  background: #010101;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+.container {
+  width: 70vw;
+  height: 80vh;
+  position: relative;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+/* coutnries */
+.topRight,
+.topLeft,
+.bottomLeft,
+.bottomRight {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.topRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-bottom-left-radius: 50%;
+}
+.topLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom-right-radius: 50%;
+}
+.bottomLeft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top-right-radius: 50%;
+}
+.bottomRight {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-top-left-radius: 50%;
+}
+
+/* classes in Javascript */
+.baseImg {
+  position: absolute;
+  top: -150px;
+  left: 46%;
+  width: 150px;
+  height: 150px;
   
-  /* coutnries */
-  .topRight,
-  .topLeft,
-  .bottomLeft,
-  .bottomRight {
-    width: 100px;
-    height: 100px;
-    background-color: yellow;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .topRight {
-    position: absolute;
-    top: 0;
-    right: 0;
-    border-bottom-left-radius: 50%;
-  }
-  .topLeft {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-bottom-right-radius: 50%;
-  }
-  .bottomLeft {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    border-top-right-radius: 50%;
-  }
-  .bottomRight {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    border-top-left-radius: 50%;
-  }
-  
-  /* classes in Javascript */
-  .baseImg {
-    position: absolute;
+}
+.container img {
+  border-radius: 50%;
+}
+.start {
+  width: 70vw;
+  margin: 0px auto;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.scoreWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.scoreWrapper p {
+  font-size: 30px;
+  color: yellow;
+  font-weight: bold;
+}
+.startBtn {
+  background: yellow;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 20px;
+}
+.imgAnimation {
+  transition: all ease-in-out;
+  animation: imgCommingDown 3s ease-in-out infinite;
+}
+@keyframes imgCommingDown {
+  from {
     top: -150px;
-    left: 46%;
-    width: 150px;
-    height: 150px;
-    transition: top ease-in-out 3s;
   }
-  .imgAnimation {
-    transition: all ease-in-out;
-    animation: imgCommingDown 3s ease-in-out;
+  to {
+    top: 100%;
+    display: none;
   }
-  @keyframes imgCommingDown {
-    from {
-      top: -150px;
-    }
-    to {
-      top: 100%;
-      display: none;
-    }
-  }
-  
+}
+
+/* game over */
+.finish {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #010101;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  transition: all ease-in-out 0.4s;
+  z-index: 100;
+  overflow: hidden;
+}
+.showModal {
+  height: 100vh;
+  width: 100vw;
+}
+.finish p {
+  color: yellow;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.Info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.Info p {
+  color: yellow;
+  font-size: 20px;
+}
+.finish button {
+  background: yellow;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 20px;
+}

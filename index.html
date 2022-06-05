@@ -8,22 +8,41 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <img src="./assets/1.jpg" width="100" class="baseImg" />
-      <div class="topRight" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div class="finish">
+      <button type="button" class="closeModalBtn">x</button>
+      <div class="Info">
+        <p>True Guess:+20</p>
+        <p>False Guess:-5</p>
+       </div>
+       <div class="scoreWrapper">
+        <p>Your score:</p>
+        <p class="scoreFinal">0</p>
+       </div>
+      <p>Game Over!</p>
+    </div>
+    <div class="start">
+      <button type="button" class="startBtn">start</button>
+     <div class="scoreWrapper">
+      <p>Your score:</p>
+      <p class="score">0</p>
+     </div>
+    </div>
+    <div class="container" id="container">
+      <img src="./assets/1.jpg" width="100" class="baseImg" draggable="true" ondragstart="drag(event)">
+      <div id="Japanese" class="topRight" ondrop="drop(event)" ondragover="allowDrop(event)">
         Japanese
       </div>
-      <div class="topLeft" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <div id="Korean" class="topLeft" ondrop="drop(event)" ondragover="allowDrop(event)">
         Korean
       </div>
-      <div
+      <div id="Chinese"
         class="bottomRight"
         ondrop="drop(event)"
         ondragover="allowDrop(event)"
       >
         Chinese
       </div>
-      <div
+      <div id="Thai"
         class="bottomLeft"
         ondrop="drop(event)"
         ondragover="allowDrop(event)"
@@ -31,6 +50,8 @@
         Thai
       </div>
     </div>
+
+  
   </body>
   <script src="./index.js"></script>
 </html>
